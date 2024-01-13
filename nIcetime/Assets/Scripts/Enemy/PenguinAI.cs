@@ -13,10 +13,11 @@ public class PenguinAI : EnemyAI
         player = GameObject.Find("Player").transform;
     }
 
-    void Update()
+    public override void Update()
     {
+        base.Update();
         // Check if player is detected
-        if (Vector3.Distance(transform.position, player.position) < detectionRadius)
+        if (Vector3.Distance(transform.position, player.position) < detectionRadius && !frozen)
         {
             // Player is detected
             Debug.Log("Player detected");

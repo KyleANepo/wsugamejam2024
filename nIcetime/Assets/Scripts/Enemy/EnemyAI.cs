@@ -11,10 +11,26 @@ public abstract class EnemyAI : MonoBehaviour
     protected int detectionRadius;
     [SerializeField]
     protected float timeBetweenAttacks;
+    [SerializeField]
+    protected GameObject Ice;
 
     protected LayerMask playerLayer; // Set this in the inspector to the layer where your player is.
     protected Transform player;
     protected bool alreadyAttacked;
+    protected bool frozen;
+
+    public virtual void Update()
+    {
+        if (frozen)
+        {
+            Frozen();
+        }
+    }
+
+    public virtual void Frozen()
+    {
+
+    }
 
     public virtual void TakeDamage(int damage)
     {
@@ -25,6 +41,8 @@ public abstract class EnemyAI : MonoBehaviour
 
     public virtual void DestroyEnemy()
     {
-        Destroy(gameObject);
+        frozen = true;
+        GameObject freeze = Instantiate(Ice, transform.position, transform.rotation);
+        // Destroy(gameObject);
     }
 }

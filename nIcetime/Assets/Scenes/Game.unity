@@ -591,6 +591,7 @@ MonoBehaviour:
   health: 1
   detectionRadius: 15
   timeBetweenAttacks: 2
+  Ice: {fileID: 3803964057259898341, guid: 4bbe7687d52e9744ab8880955d049cbf, type: 3}
   objectToThrow: {fileID: 7360831628880010460, guid: 0cce1b2aab1c7564ca54debf50a58d1c, type: 3}
 --- !u!1 &301529534
 GameObject:
