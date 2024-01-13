@@ -45,6 +45,8 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask whatIsIce;
     bool grounded;
     bool iced;
+    bool above;
+    private bool forcedCrouch;
 
     [Header("Slope Handling")]
     public float maxSlopeAngle;
@@ -87,6 +89,7 @@ public class PlayerMovement : MonoBehaviour
         // ground check
         grounded = (Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.3f, whatIsGround) || OnSlope());
         iced = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.3f, whatIsIce);
+        above = (Physics.Raycast(transform.position, Vector3.up, playerHeight - 0.3f, whatIsGround));
 
         if (iced)
         {
@@ -118,7 +121,7 @@ public class PlayerMovement : MonoBehaviour
         verticalInput = Input.GetAxisRaw("Vertical");
 
         // when to jump
-        if(Input.GetKey(jumpKey) && readyToJump && grounded)
+        if (Input.GetKey(jumpKey) && readyToJump && grounded)
         {
             readyToJump = false;
 
@@ -135,9 +138,16 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //Stop Crouch
-        if (Input.GetKeyUp(crouchKey))
+        if (Input.GetKeyUp(crouchKey) || forcedCrouch)
         {
-            transform.localScale = new Vector3(transform.localScale.x, startYScale, transform.localScale.z);
+            if (above) forcedCrouch = true;
+            else forcedCrouch = false;
+            if (forcedCrouch == false)
+                transform.localScale = new Vector3(transform.localScale.x, startYScale, transform.localScale.z);
+                if (transform.localScale.y < 1)
+                {
+                     rb.AddForce(moveDirection.normalized * moveSpeed * 15f, ForceMode.Force);
+            }
         }
 
     }
