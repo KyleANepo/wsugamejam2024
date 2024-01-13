@@ -335,52 +335,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &244209158
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 244209160}
-  - component: {fileID: 244209159}
-  m_Layer: 0
-  m_Name: HealthManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &244209159
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 244209158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc88b1d43bf0a64469c214059c9b9792, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthBar: {fileID: 1279047640}
-  healthAmount: 100
---- !u!4 &244209160
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 244209158}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 128.30435, y: 79.43547, z: 126.403244}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &383338161
 GameObject:
   m_ObjectHideFlags: 0
@@ -601,7 +555,7 @@ GameObject:
   - component: {fileID: 601196607}
   m_Layer: 8
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1455,9 +1409,10 @@ GameObject:
   - component: {fileID: 1577063149}
   - component: {fileID: 1577063148}
   - component: {fileID: 1577063147}
+  - component: {fileID: 1577063150}
   m_Layer: 8
   m_Name: PlayerBody
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1550,6 +1505,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1577063145}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1577063150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577063145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc88b1d43bf0a64469c214059c9b9792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 1279047640}
+  healthAmount: 100
 --- !u!1 &1626911336
 GameObject:
   m_ObjectHideFlags: 0
@@ -2065,13 +2034,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
-  detectionRadius: 3
+  detectionRadius: 10
   objectToThrow: {fileID: 7360831628880010460, guid: 0cce1b2aab1c7564ca54debf50a58d1c, type: 3}
   playerLayer:
     serializedVersion: 2
     m_Bits: 1
   player: {fileID: 601196606}
-  timeBetweenAttacks: 3
+  timeBetweenAttacks: 2
   projectile: {fileID: 7360831628880010460, guid: 2b661eca6ef1a934ca0e1ab4decc47d5, type: 3}
 --- !u!1 &1935696333
 GameObject:
@@ -2227,4 +2196,3 @@ SceneRoots:
   - {fileID: 1782269092}
   - {fileID: 890337353}
   - {fileID: 473622042}
-  - {fileID: 244209160}

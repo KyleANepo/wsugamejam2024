@@ -5,7 +5,8 @@ using UnityEngine;
 public class PenguinBullet : MonoBehaviour
 {
     [SerializeField] public float speed = 10f;
-    [SerializeField] public int damage = 20;
+    [SerializeField] public float damage = 20f;
+    public GameObject health;
     int destroyTime = 2;
 
     private void Start()
@@ -21,11 +22,16 @@ public class PenguinBullet : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag("Player"))
         {
             // Add player damage function here! :3
+            if(other.gameObject.TryGetComponent<HealthDisplay>(out HealthDisplay player))
+            {
+                player.TakeDamage(damage);
+            }
 
             Destroy(gameObject);
+
         }
     }
 }

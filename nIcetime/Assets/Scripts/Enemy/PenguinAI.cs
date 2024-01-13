@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class PenguinAI : MonoBehaviour
 {
     [SerializeField] int health;
-    [SerializeField] float detectionRadius = 5f;
+    [SerializeField] int detectionRadius = 20;
 
     public GameObject objectToThrow;
 
@@ -27,10 +27,8 @@ public class PenguinAI : MonoBehaviour
 
     void Update()
     {
-        Collider[] colliders = Physics.OverlapSphere(transform.position, detectionRadius, playerLayer);
-
         // Check if player is detected
-        if (colliders.Length > 0)
+        if (Vector3.Distance(transform.position, player.position) < detectionRadius)
         {
             // Player is detected
             Debug.Log("Player detected");

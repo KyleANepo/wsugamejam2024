@@ -29,11 +29,12 @@ public class HealthDisplay : MonoBehaviour
         }
     }
 
+    // Healthdisplay is a bad name for this, this is the player health tracker
     public void TakeDamage(float damage)
     {
         healthAmount -= damage;
         healthBar.fillAmount = healthAmount / 100;
-    }
+    } 
 
     public void Heal(float healingAmount)
     {
