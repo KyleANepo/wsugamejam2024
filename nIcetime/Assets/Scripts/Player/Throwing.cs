@@ -29,7 +29,7 @@ public class Throwing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(throwKey) && readyToThrow)
+        if(Input.GetKeyDown(throwKey) && readyToThrow && !PauseMenu.GameIsPaused)
         {
             Throw();
         }
