@@ -955,10 +955,14 @@ MonoBehaviour:
   cam: {fileID: 963194228}
   attackPoint: {fileID: 1935696334}
   objectToThrow: {fileID: 7360831628880010460, guid: 2b661eca6ef1a934ca0e1ab4decc47d5, type: 3}
+  altobjectToThrow: {fileID: 7360831628880010460, guid: f37bb8a08531e8b4ba55ef9eacfaf614, type: 3}
   throwCooldown: 1
   throwKey: 323
   throwForce: 40
   throwUpwardForce: 1
+  altthrowKey: 324
+  altthrowForce: 20
+  altthrowUpwardForce: 1
 --- !u!114 &601196608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1362,6 +1366,7 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
+  - component: {fileID: 963194230}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1458,6 +1463,27 @@ MonoBehaviour:
   sensX: 400
   sensY: 400
   orientation: {fileID: 383338162}
+--- !u!95 &963194230
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2a9c1cfb4968c89438c5100bcf34c845, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1011880967
 GameObject:
   m_ObjectHideFlags: 0
