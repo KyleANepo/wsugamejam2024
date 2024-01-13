@@ -3,9 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class PenguinAI : EnemyAI
+public class TestPenguinAI : MonoBehaviour
 {
-    // Penguin Bullet
+    [SerializeField] int health;
+    [SerializeField] int detectionRadius = 20;
+
+    public LayerMask playerLayer; // Set this in the inspector to the layer where your player is.
+    public Transform player;
+
+
+    //Attacking
+    public float timeBetweenAttacks;
+    bool alreadyAttacked;
     public GameObject objectToThrow;
 
     private void Awake()
@@ -42,9 +51,22 @@ public class PenguinAI : EnemyAI
         alreadyAttacked = false;
     }
 
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+
+        if (health <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
+    }
+
+    private void DestroyEnemy()
+    {
+        Destroy(gameObject);
+    }
+
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, detectionRadius);
     }
+
 }

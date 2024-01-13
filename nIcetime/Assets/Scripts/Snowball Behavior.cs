@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SnowballBehavior : MonoBehaviour
@@ -18,9 +19,11 @@ public class SnowballBehavior : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (targetHit)
-            return;
-        else targetHit = true;
+        if (collision.gameObject.tag == "Enemy")
+        {
+            EnemyAI target = collision.transform.gameObject.GetComponent<EnemyAI>();
+            target.TakeDamage(1);
+        }
 
         //Make sure projectile moves with target
         rb.isKinematic = true;
