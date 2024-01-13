@@ -8,11 +8,12 @@ public class SnowballBehavior : MonoBehaviour
 
     private bool targetHit;
 
-
+    public TrailRenderer Trail;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        Trail = GetComponentInChildren<TrailRenderer>();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -26,6 +27,10 @@ public class SnowballBehavior : MonoBehaviour
 
         //Make sure projectile moves with target
         transform.SetParent(collision.transform);
+
+        Trail.transform.parent = null;
+        Trail.autodestruct = true;
+
 
         Destroy(gameObject);
     }
