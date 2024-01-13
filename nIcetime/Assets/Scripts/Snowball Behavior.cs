@@ -27,6 +27,7 @@ public class SnowballBehavior : MonoBehaviour
         //Make sure projectile moves with target
         transform.SetParent(collision.transform);
 
+        Destroy(gameObject);
     }
 
     // Update is called once per frame
