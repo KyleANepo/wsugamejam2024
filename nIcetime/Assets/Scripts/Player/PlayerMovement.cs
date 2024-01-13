@@ -33,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
     public float crouchSpeed;
     public float crouchYScale;
     private float startYScale;
+    private bool crouched;
 
     [Header("Keybinds")]
     public KeyCode jumpKey = KeyCode.Space;
@@ -138,17 +139,19 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //Stop Crouch
-        if (Input.GetKeyUp(crouchKey) || forcedCrouch)
+        if (Input.GetKeyUp(crouchKey) || above)
         {
-            if (above) forcedCrouch = true;
-            else forcedCrouch = false;
-            if (forcedCrouch == false)
+            if (!above)
+            {
                 transform.localScale = new Vector3(transform.localScale.x, startYScale, transform.localScale.z);
                 if (transform.localScale.y < 1)
                 {
-                     rb.AddForce(moveDirection.normalized * moveSpeed * 15f, ForceMode.Force);
+                    rb.AddForce(moveDirection.normalized * moveSpeed * 15f, ForceMode.Force);
+                }
             }
         }
+
+
 
     }
 

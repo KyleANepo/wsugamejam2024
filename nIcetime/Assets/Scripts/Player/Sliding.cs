@@ -14,9 +14,12 @@ public class Sliding : MonoBehaviour
     public float maxSlideTime;
     public float slideForce;
     private float slideTimer;
+    public LayerMask whatIsGround;
 
     public float slideYScale;
     private float startYScale;
+
+    private bool above;
 
     [Header("Input")]
     public KeyCode slideKey = KeyCode.LeftControl;
@@ -36,11 +39,12 @@ public class Sliding : MonoBehaviour
     {
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
+        above = (Physics.Raycast(transform.position, Vector3.up, startYScale - 0.3f, whatIsGround));
 
         if (Input.GetKeyDown(slideKey) && (horizontalInput != 0 || verticalInput != 0))
             StartSlide();
 
-        if (Input.GetKeyUp(slideKey) && pm.sliding)
+        if (Input.GetKeyUp(slideKey) && pm.sliding && !above)
             StopSlide();
     }
 
