@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7188752224514533651}
   - component: {fileID: 6403934815670155318}
   - component: {fileID: 8312015769089699140}
+  - component: {fileID: 3755604823644565681}
   m_Layer: 0
   m_Name: SnowballTest
   m_TagString: Untagged
@@ -98,7 +99,7 @@ SphereCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -133,3 +134,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3755604823644565681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7360831628880010460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a438d22c262d3c468551bb910ab12be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
