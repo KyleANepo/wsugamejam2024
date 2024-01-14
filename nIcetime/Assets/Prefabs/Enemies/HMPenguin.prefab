@@ -473,7 +473,7 @@ MeshRenderer:
   m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -547,7 +547,6 @@ MonoBehaviour:
   hit1: {fileID: 8521945400345088417}
   hit2: {fileID: 5535201982179623967}
   hit3: {fileID: 8677809348840873472}
-  meshRenderer: {fileID: 7006752302119719386}
   objectToThrow: {fileID: 7360831628880010460, guid: 0cce1b2aab1c7564ca54debf50a58d1c, type: 3}
   frequency: 3
   magnitude: 1
