@@ -44,10 +44,6 @@ public class Throwing : MonoBehaviour
         {
             Throw();
         }
-        if (Input.GetKeyDown(altthrowKey) && readyToThrow && !PauseMenu.GameIsPaused)
-        {
-            altThrow();
-        }
     }
 
     public void Throw()
