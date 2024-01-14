@@ -23,6 +23,8 @@ public class HMPenguinAI : EnemyAI
     public override void Update()
     {
         base.Update();
+        transform.LookAt(player);
+
         // Check if player is detected
         if (!frozen)
         {
@@ -50,7 +52,6 @@ public class HMPenguinAI : EnemyAI
 
     private void AttackPlayer()
     {
-        transform.LookAt(player);
 
         if (!alreadyAttacked)
         {
