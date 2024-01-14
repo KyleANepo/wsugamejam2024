@@ -8,6 +8,9 @@ public class HealthDisplay : MonoBehaviour
     public Image healthBar;
     public float healthAmount = 100f;
 
+    [Header("Audio")]
+    public AudioSource takeDmg;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,16 +25,12 @@ public class HealthDisplay : MonoBehaviour
             Debug.Log("Lose menu here!");
         }
 
-        // just here for debug purposes
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            TakeDamage(20);
-        }
     }
 
     // Healthdisplay is a bad name for this, this is the player health tracker
     public void TakeDamage(float damage)
     {
+        takeDmg.Play();
         healthAmount -= damage;
         healthBar.fillAmount = healthAmount / 100;
     } 

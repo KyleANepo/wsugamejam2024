@@ -23,6 +23,11 @@ public class Throwing : MonoBehaviour
     public float altthrowForce;
     public float altthrowUpwardForce;
 
+    [Header("Audio")]
+    public AudioSource Throw1;
+    public AudioSource Throw2;
+    public AudioSource Throw3;
+
     bool readyToThrow;
 
     // Start is called before the first frame update
@@ -49,6 +54,11 @@ public class Throwing : MonoBehaviour
     {
         readyToThrow = false;
 
+        int randomNumber = Random.Range(0, 2);
+        if (randomNumber == 0) Throw1.Play();
+        else if (randomNumber == 1) Throw2.Play();
+        else Throw3.Play();
+
         //Object to throw
         GameObject projectile = Instantiate(objectToThrow, attackPoint.position, cam.rotation);
 
@@ -67,6 +77,7 @@ public class Throwing : MonoBehaviour
         Vector3 forceToAdd = forceDirection * throwForce + transform.up * throwUpwardForce;
 
         projectileRb.AddForce(forceToAdd, ForceMode.Impulse);
+
 
         //CoolDown
         Invoke(nameof(ResetThrow), throwCooldown);
