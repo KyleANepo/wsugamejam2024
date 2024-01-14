@@ -7,13 +7,36 @@ public class TimerDisplay : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI timerText;
     float elapsedTime;
+    private int minutes;
+    private int seconds;
+    private bool timerActive;
+
+    private void Start()
+    {
+        timerActive = true;
+    }
 
     // Update is called once per frame
     void Update()
     {
-        elapsedTime += Time.deltaTime;
-        int minutes = Mathf.FloorToInt(elapsedTime / 60);
-        int seconds = Mathf.FloorToInt(elapsedTime % 60);
-        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        if (timerActive)
+        {
+            elapsedTime += Time.deltaTime;
+            minutes = Mathf.FloorToInt(elapsedTime / 60);
+            seconds = Mathf.FloorToInt(elapsedTime % 60);
+            timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        }
+        if (minutes == 10)
+        {
+            PauseTimer();
+            
+        }
+    }
+
+    public string PauseTimer()
+    {
+        timerActive = false;
+        return timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+
     }
 }
