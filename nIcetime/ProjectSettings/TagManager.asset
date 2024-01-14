@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Bts
+  - Tutorial
   layers:
   - Default
   - TransparentFX
