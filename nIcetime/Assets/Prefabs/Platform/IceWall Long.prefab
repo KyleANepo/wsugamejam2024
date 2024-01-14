@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8950860396076331663}
   - component: {fileID: 321385210301306980}
   - component: {fileID: 2460974741346260028}
+  - component: {fileID: 7630626176228594431}
   m_Layer: 7
   m_Name: Ice wall.011
   m_TagString: Untagged
@@ -83,6 +84,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7630626176228594431
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439244274027848158}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.02018208, y: 0.110196315, z: 0.19374646}
+  m_Center: {x: 0.00009103711, y: 0.0029285226, z: 0.09724368}
 --- !u!1 &809463045661952113
 GameObject:
   m_ObjectHideFlags: 0
@@ -128,6 +150,7 @@ GameObject:
   - component: {fileID: 2043181529190042999}
   - component: {fileID: 8993756310478906273}
   - component: {fileID: 7540149279455194375}
+  - component: {fileID: 5996696228172095376}
   m_Layer: 7
   m_Name: Ice wall.010
   m_TagString: Untagged
@@ -200,6 +223,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5996696228172095376
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913366993182519879}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.02018208, y: 0.109231144, z: 0.19374646}
+  m_Center: {x: 0.000091037065, y: 0.0024459392, z: 0.09724368}
 --- !u!1 &8446200687464996625
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,6 +255,7 @@ GameObject:
   - component: {fileID: 6188585486509943031}
   - component: {fileID: 7138965023933596665}
   - component: {fileID: 5478673796565005868}
+  - component: {fileID: 4210454193561048167}
   m_Layer: 7
   m_Name: Ice wall.009
   m_TagString: Untagged
@@ -283,3 +328,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4210454193561048167
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8446200687464996625}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.02018208, y: 0.11011781, z: 0.19374646}
+  m_Center: {x: 0.0000910371, y: 0.0028892693, z: 0.09724368}

@@ -674,7 +674,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 863ccb1754144d446adfe5f5e4637921, type: 2}
+  - {fileID: 2100000, guid: b1065f3b3f830e84181f20ac8619c08a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -713,7 +713,7 @@ Transform:
   m_GameObject: {fileID: 309175513}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 72.95246, y: 16.75671, z: 23.95152}
+  m_LocalPosition: {x: 72.95246, y: 16.71, z: 23.95152}
   m_LocalScale: {x: 21.336206, y: 1, z: 6.1764092}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -873,7 +873,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 863ccb1754144d446adfe5f5e4637921, type: 2}
+  - {fileID: 2100000, guid: b1065f3b3f830e84181f20ac8619c08a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1433,7 +1433,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 863ccb1754144d446adfe5f5e4637921, type: 2}
+  - {fileID: 2100000, guid: b1065f3b3f830e84181f20ac8619c08a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1472,7 +1472,7 @@ Transform:
   m_GameObject: {fileID: 814578380}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 72.95246, y: 16.75671, z: 3.5215225}
+  m_LocalPosition: {x: 72.95246, y: 16.76, z: 3.5215225}
   m_LocalScale: {x: 21.336206, y: 1, z: 6.1764092}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1607,7 +1607,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 863ccb1754144d446adfe5f5e4637921, type: 2}
+  - {fileID: 2100000, guid: b1065f3b3f830e84181f20ac8619c08a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1646,7 +1646,7 @@ Transform:
   m_GameObject: {fileID: 1010480758}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 65.44246, y: 16.75671, z: 34.561523}
+  m_LocalPosition: {x: 65.44246, y: 16.76, z: 34.561523}
   m_LocalScale: {x: 15.505661, y: 1, z: 6.1764097}
   m_ConstrainProportionsScale: 0
   m_Children: []

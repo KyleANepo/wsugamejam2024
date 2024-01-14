@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 810682105665635685}
   - component: {fileID: 4484651590602317686}
   - component: {fileID: 7786394151932491955}
+  - component: {fileID: 2735635236548704630}
   m_Layer: 7
   m_Name: Ice wall.005
   m_TagString: Untagged
@@ -83,6 +84,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2735635236548704630
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3796523364742211283}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.02018208, y: 0.11011781, z: 0.19374646}
+  m_Center: {x: 0.0000910371, y: 0.0028892693, z: 0.09724368}
 --- !u!1 &4172794146720553871
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,6 +116,7 @@ GameObject:
   - component: {fileID: 4614181715328268091}
   - component: {fileID: 5430107571900162838}
   - component: {fileID: 1559383333826666689}
+  - component: {fileID: 3564803602749062715}
   m_Layer: 7
   m_Name: Ice wall.007
   m_TagString: Untagged
@@ -166,6 +189,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3564803602749062715
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4172794146720553871}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.02018208, y: 0.110196315, z: 0.19374646}
+  m_Center: {x: 0.00009103711, y: 0.0029285226, z: 0.09724368}
 --- !u!1 &5105841635723431988
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,6 +221,7 @@ GameObject:
   - component: {fileID: 5005522017584049798}
   - component: {fileID: 3999416389840314032}
   - component: {fileID: 3871892261569559312}
+  - component: {fileID: 1040032569458841618}
   m_Layer: 6
   m_Name: Platform Rectangle 21x7.001
   m_TagString: Untagged
@@ -250,6 +295,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1040032569458841618
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5105841635723431988}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.019999998, y: 0.019999996, z: 0.051854447}
+  m_Center: {x: 9.0910013e-10, y: -2.3656803e-18, z: -0.014935028}
 --- !u!1 &5487939001268336700
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,6 +362,7 @@ GameObject:
   - component: {fileID: 7743494586213228145}
   - component: {fileID: 4085869009397695605}
   - component: {fileID: 1088017123271064459}
+  - component: {fileID: 2208536628332991542}
   m_Layer: 7
   m_Name: Ice wall.006
   m_TagString: Untagged
@@ -368,3 +435,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2208536628332991542
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8650421213182811738}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.02018208, y: 0.109231144, z: 0.19374646}
+  m_Center: {x: 0.000091037065, y: 0.0024459392, z: 0.09724368}
