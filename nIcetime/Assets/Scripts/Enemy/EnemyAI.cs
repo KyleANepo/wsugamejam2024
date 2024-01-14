@@ -47,13 +47,16 @@ public abstract class EnemyAI : MonoBehaviour
         else if (randomNumber == 1) hit2.Play();
         else hit3.Play();
 
-        HealthDisplay.scoreSubtract = HealthDisplay.scoreSubtract + 2;
-
+        if (!frozen)
+        {
+            HealthDisplay.scoreSubtract = HealthDisplay.scoreSubtract + 2;
+        }
         if (health <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
     }
 
     public virtual void DestroyEnemy()
     {
+
         frozen = true;
         GameObject freeze = Instantiate(Ice, transform.position, transform.rotation);
         // Destroy(gameObject);
