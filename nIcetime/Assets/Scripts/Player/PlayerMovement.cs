@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Jumping")]
     public float jumpForce;
+    public float jumpForceBoost = 12;
     public float jumpCooldown;
     public float airMultiplier;
     bool readyToJump;
@@ -46,8 +47,10 @@ public class PlayerMovement : MonoBehaviour
     public float playerHeight;
     public LayerMask whatIsGround;
     public LayerMask whatIsIce;
+    public LayerMask whatIsJP;
     public bool grounded;
     bool iced;
+    bool jumppad;
     bool above;
     private bool forcedCrouch;
 
@@ -93,6 +96,7 @@ public class PlayerMovement : MonoBehaviour
         // ground check
         grounded = (Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.3f, whatIsGround) || OnSlope());
         iced = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.3f, whatIsIce);
+        jumppad = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.3f, whatIsJP);
         above = (Physics.Raycast(transform.position, Vector3.up, playerHeight * 0.5f, whatIsGround));
 
         if (iced)
@@ -101,6 +105,13 @@ public class PlayerMovement : MonoBehaviour
             groundDrag = iceGroundDrag;
         }
         else groundDrag = savedGroundDrag;
+
+        if (jumppad)
+        {
+            Debug.Log("on jumppad");
+            jumpForce = jumpForceBoost + 12;
+        }
+        else jumpForce = 12;
 
         MyInput();
         SpeedControl();
