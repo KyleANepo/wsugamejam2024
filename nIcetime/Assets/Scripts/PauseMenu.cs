@@ -13,25 +13,29 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameIsPaused && pauseMenuUI != null)
+        if (!WinScreen.GameWon)
         {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-        }
-        else
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-        }
+            if (GameIsPaused && pauseMenuUI != null)
+            {
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+            }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (GameIsPaused) 
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
-                Resume();
-            } else
-            {
-                Pause();
+                if (GameIsPaused)
+                {
+                    Resume();
+                }
+                else
+                {
+                    Pause();
+                }
             }
         }
     }
