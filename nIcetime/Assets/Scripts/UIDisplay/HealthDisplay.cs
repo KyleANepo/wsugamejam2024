@@ -24,6 +24,7 @@ public class HealthDisplay : MonoBehaviour
         if (healthAmount <= 0)
         {
             Debug.Log("Lose menu here!");
+            Lose();
         }
 
     }
@@ -34,7 +35,12 @@ public class HealthDisplay : MonoBehaviour
         takeDmg.Play();
         healthAmount -= damage;
         healthBar.fillAmount = healthAmount / 100;
-    } 
+    }
+
+    public void Lose()
+    {
+
+    }
 
     public void Heal(float healingAmount)
     {

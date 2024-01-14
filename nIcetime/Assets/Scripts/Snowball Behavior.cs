@@ -13,10 +13,13 @@ public class SnowballBehavior : MonoBehaviour
 
     public GameObject explosion;
 
+    [SerializeField] int destroyTime = 3;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         Trail = GetComponentInChildren<TrailRenderer>();
+        Destroy(gameObject, destroyTime);
     }
 
     private void OnCollisionEnter(Collision collision)
