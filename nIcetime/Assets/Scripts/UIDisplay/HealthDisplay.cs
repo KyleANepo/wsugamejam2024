@@ -7,6 +7,7 @@ public class HealthDisplay : MonoBehaviour
 {
     public Image healthBar;
     public float healthAmount = 100f;
+    public static int scoreSubtract = 0;
 
     [Header("Audio")]
     public AudioSource takeDmg;
@@ -14,7 +15,7 @@ public class HealthDisplay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        scoreSubtract = 0;
     }
 
     // Update is called once per frame
