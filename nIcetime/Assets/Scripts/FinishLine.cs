@@ -13,7 +13,7 @@ public class FinishLine : MonoBehaviour
         td = GameObject.FindGameObjectWithTag("Bts").GetComponent<TimerDisplay>();
     }
 
-    private void onTriggerEnter()
+    private void OnTriggerEnter()
     {
 
         if (one == 1)
