@@ -11,7 +11,7 @@ public class SnowballBehavior : MonoBehaviour
 
     public TrailRenderer Trail;
 
-    public GameObject explosion;
+    // public GameObject explosion;
 
     [SerializeField] int destroyTime = 3;
 
@@ -30,7 +30,7 @@ public class SnowballBehavior : MonoBehaviour
             target.TakeDamage(1);
         }
 
-        GameObject exp = Instantiate(explosion, transform.position, transform.rotation);
+        // GameObject exp = Instantiate(explosion, transform.position, transform.rotation);
 
         //Make sure projectile moves with target
         rb.isKinematic = true;
@@ -41,7 +41,7 @@ public class SnowballBehavior : MonoBehaviour
         Trail.transform.parent = null;
         Trail.autodestruct = true;
 
-        Destroy(exp, 0.5f);
+        // Destroy(exp, 0.5f);
         Destroy(gameObject);
     }
 
