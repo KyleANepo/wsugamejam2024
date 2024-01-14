@@ -24,7 +24,7 @@ public class TimerDisplay : MonoBehaviour
             elapsedTime += Time.deltaTime;
             minutes = Mathf.FloorToInt(elapsedTime / 60);
             seconds = Mathf.FloorToInt(elapsedTime % 60);
-            timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+            timerText.text = string.Format("Time: {0:00}:{1:00}", minutes, seconds) + "  Score: " + string.Format("{00}",HealthDisplay.scoreSubtract);
         }
         if (minutes == 10)
         {
@@ -33,10 +33,15 @@ public class TimerDisplay : MonoBehaviour
         }
     }
 
-    public string PauseTimer()
+    public void PauseTimer()
     {
         timerActive = false;
-        return timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        int finalScore = ((int)(1000 - (elapsedTime - HealthDisplay.scoreSubtract)));
+        timerText.text = "Final Score: " + finalScore.ToString();
 
     }
+
+
+
+
 }

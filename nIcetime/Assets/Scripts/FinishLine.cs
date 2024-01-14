@@ -5,20 +5,19 @@ using UnityEngine;
 public class FinishLine : MonoBehaviour
 {
     private int one = 1;
-    TimerDisplay td;
-    string finishedTime;
+    public TimerDisplay td;
 
     private void Start()
     {
-        td = GameObject.FindGameObjectWithTag("Bts").GetComponent<TimerDisplay>();
+
     }
 
-    private void OnTriggerEnter()
+    private void OnTriggerEnter(Collider other)
     {
 
-        if (one == 1)
+        if (one == 1 && (other.tag == ("Player")))
         {
-            finishedTime = td.PauseTimer();
+            td.PauseTimer();
             one--;  //Code runs once only.
         }
     }
