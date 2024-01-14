@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEditor.Experimental.GraphView;
+using Unity.VisualScripting;
+using UnityEngine.TextCore.Text;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -36,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
     public float crouchSpeed;
     public float crouchYScale;
     private float startYScale;
-    private bool crouched;
+    public bool crouched;
 
     [Header("Keybinds")]
     public KeyCode jumpKey = KeyCode.Space;
@@ -51,12 +53,13 @@ public class PlayerMovement : MonoBehaviour
     public bool grounded;
     bool iced;
     bool jumppad;
-    bool above;
+    public bool above;
     private bool forcedCrouch;
 
     [Header("Slope Handling")]
     public float maxSlopeAngle;
     private RaycastHit slopeHit;
+    private RaycastHit aboveHit;
     private bool exitingSlope;
     public bool slopeGravityToggle;
 
@@ -73,6 +76,7 @@ public class PlayerMovement : MonoBehaviour
 
     public bool sliding;
     public bool climbing;
+    private float startYpos;
 
     public enum MovementState { 
         walking, sprinting, air, crouching, sliding, climbing
@@ -88,6 +92,7 @@ public class PlayerMovement : MonoBehaviour
 
         savedGroundDrag = groundDrag;
 
+        startYpos = transform.position.y;
         startYScale = transform.localScale.y;
     }
 
@@ -97,7 +102,7 @@ public class PlayerMovement : MonoBehaviour
         grounded = (Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.3f, whatIsGround) || OnSlope());
         iced = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.3f, whatIsIce);
         jumppad = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.3f, whatIsJP);
-        above = (Physics.Raycast(transform.position, Vector3.up, playerHeight * 0.5f, whatIsGround));
+        above = (Physics.SphereCast(transform.position,0.5f, Vector3.up,out aboveHit, playerHeight * 0.5f, whatIsGround));
 
         if (iced)
         {
@@ -145,7 +150,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //Start Crouch
-        if (Input.GetKeyDown(crouchKey))
+        if (Input.GetKeyDown(crouchKey) || crouched)
         {
             transform.localScale = new Vector3(transform.localScale.x, crouchYScale, transform.localScale.z);
             rb.AddForce(Vector3.down * 5f, ForceMode.Impulse);
@@ -157,10 +162,16 @@ public class PlayerMovement : MonoBehaviour
             if (!above)
             {
                 transform.localScale = new Vector3(transform.localScale.x, startYScale, transform.localScale.z);
-                if (transform.localScale.y < 1)
+                if (transform.position.y < startYpos / 3f && transform.position.y > -1f)
                 {
-                    rb.AddForce(moveDirection.normalized * moveSpeed * 15f, ForceMode.Force);
+                    EmergencyMove();
+                    transform.localScale = new Vector3(transform.localScale.x, startYScale, transform.localScale.z);
                 }
+
+            }
+            else
+            {
+                EmergencyMove();
             }
         }
 
@@ -351,6 +362,16 @@ public class PlayerMovement : MonoBehaviour
         return Vector3.ProjectOnPlane(direction, slopeHit.normal).normalized;
     }
 
+    public void EmergencyMove()
+    {
+        if(transform.position.y < startYpos/3f && transform.position.y > - 1f)
+        {
+            transform.position += transform.forward * 3f;
+            transform.position += transform.up * 1f;
+
+
+        }
+    }
 
 
 }

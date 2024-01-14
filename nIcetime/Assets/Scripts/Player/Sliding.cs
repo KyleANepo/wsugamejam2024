@@ -82,8 +82,16 @@ public class Sliding : MonoBehaviour
             rb.AddForce(pm.GetSlopeMoveDirection(inputDirection) * slideForce, ForceMode.Force);
         }
 
-        if (slideTimer <= 0)
+        if (slideTimer <= 0 && !(pm.above))
+        {
             StopSlide();
+            
+        }
+        else if (slideTimer <= 0 && pm.above)
+        {
+            pm.EmergencyMove();
+            slideTimer += 0.5f;
+        }
     }
 
     private void StopSlide()
