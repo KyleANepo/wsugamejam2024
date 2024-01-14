@@ -291,6 +291,7 @@ MonoBehaviour:
   hit1: {fileID: 7533098406978217346}
   hit2: {fileID: 7839795528274785227}
   hit3: {fileID: 8848512926307912120}
+  meshRenderer: {fileID: 4242007119802380447}
   objectToThrow: {fileID: 7360831628880010460, guid: 3b148709eb2ccc541bd8169ae2ce4c64, type: 3}
 --- !u!1 &4177568380451193280
 GameObject:

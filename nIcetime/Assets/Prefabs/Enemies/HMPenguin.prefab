@@ -547,6 +547,7 @@ MonoBehaviour:
   hit1: {fileID: 8521945400345088417}
   hit2: {fileID: 5535201982179623967}
   hit3: {fileID: 8677809348840873472}
+  meshRenderer: {fileID: 7006752302119719386}
   objectToThrow: {fileID: 7360831628880010460, guid: 0cce1b2aab1c7564ca54debf50a58d1c, type: 3}
   frequency: 3
   magnitude: 1

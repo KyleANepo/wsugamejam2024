@@ -8,7 +8,7 @@ public class PenguinAI : EnemyAI
     // Penguin Bullet
     public GameObject objectToThrow;
 
-    private void Awake()
+    public void Awake()
     {
         player = GameObject.Find("Player").transform;
     }
