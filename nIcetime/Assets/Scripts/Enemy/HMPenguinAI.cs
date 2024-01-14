@@ -23,11 +23,11 @@ public class HMPenguinAI : EnemyAI
     public override void Update()
     {
         base.Update();
-        transform.LookAt(player);
 
         // Check if player is detected
         if (!frozen)
         {
+            transform.LookAt(player);
             if (Vector3.Distance(transform.position, player.position) < detectionRadius)
             {
                 // Player is detected
