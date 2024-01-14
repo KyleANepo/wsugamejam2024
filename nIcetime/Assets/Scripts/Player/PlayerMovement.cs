@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     public float walkSpeed;
     public float sprintSpeed;
     public float slideSpeed;
+    public float climbSpeed;
+    public float iceSpeedMultiplier;
 
     private float desiredMoveSpeed;
     private float lastDesiredMoveSpeed;
@@ -44,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
     public float playerHeight;
     public LayerMask whatIsGround;
     public LayerMask whatIsIce;
-    bool grounded;
+    public bool grounded;
     bool iced;
     bool above;
     private bool forcedCrouch;
@@ -67,9 +69,10 @@ public class PlayerMovement : MonoBehaviour
     public MovementState state;
 
     public bool sliding;
+    public bool climbing;
 
     public enum MovementState { 
-        walking, sprinting, air, crouching, sliding
+        walking, sprinting, air, crouching, sliding, climbing
     }
 
 
@@ -90,7 +93,7 @@ public class PlayerMovement : MonoBehaviour
         // ground check
         grounded = (Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.3f, whatIsGround) || OnSlope());
         iced = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.3f, whatIsIce);
-        above = (Physics.Raycast(transform.position, Vector3.up, playerHeight - 0.3f, whatIsGround));
+        above = (Physics.Raycast(transform.position, Vector3.up, playerHeight * 0.5f, whatIsGround));
 
         if (iced)
         {
@@ -102,7 +105,6 @@ public class PlayerMovement : MonoBehaviour
         MyInput();
         SpeedControl();
         StateHandler();
-
 
         // handle drag
         if (grounded)
@@ -157,6 +159,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void StateHandler()
     {
+
+
         if (sliding)
         {
             state = MovementState.sliding;
@@ -174,6 +178,13 @@ public class PlayerMovement : MonoBehaviour
             desiredMoveSpeed = crouchSpeed;
 
         }
+        //climbing
+        else if (climbing)
+        {
+            state = MovementState.climbing;
+            desiredMoveSpeed = climbSpeed;
+        }
+
         //Mode = Sprinting
         else if(grounded && Input.GetKey(sprintKey))
         {
@@ -202,7 +213,10 @@ public class PlayerMovement : MonoBehaviour
         {
             moveSpeed = desiredMoveSpeed;
         }
-
+        if (iced)
+        {
+            desiredMoveSpeed = desiredMoveSpeed * iceSpeedMultiplier;
+        }
         lastDesiredMoveSpeed = desiredMoveSpeed;
 
 
@@ -271,14 +285,18 @@ public class PlayerMovement : MonoBehaviour
 
     private void SpeedControl() {
      // limiting speed on slope (MAY CHANGE/DELETE LATER)
-        if (OnSlope() && !exitingSlope)
+        if (OnSlope() && !exitingSlope && rb.velocity.y > 0f)
         {
             if (rb.velocity.magnitude > moveSpeed)
                 rb.velocity = rb.velocity.normalized* moveSpeed;
         }
-
+        else if (OnSlope() && !exitingSlope && rb.velocity.y < 0f)
+        {
+            if (rb.velocity.magnitude > moveSpeed)
+                rb.velocity = rb.velocity.normalized * moveSpeed * 1.6f;
+        }
         // limiting speed on ground or in air
-        else
+        else if (!OnSlope())
         {
             Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
