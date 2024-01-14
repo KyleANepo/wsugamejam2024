@@ -6,8 +6,7 @@ public class PenguinBullet : MonoBehaviour
 {
     [SerializeField] public float speed = 10f;
     [SerializeField] public float damage = 20f;
-    public GameObject health;
-    int destroyTime = 2;
+    [SerializeField] int destroyTime = 2;
 
     private void Start()
     {
