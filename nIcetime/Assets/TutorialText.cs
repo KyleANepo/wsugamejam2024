@@ -29,7 +29,7 @@ public class TutorialText : MonoBehaviour
         }
         else if (textOption == 4)
         {
-            return "Run at the wall to climb it";
+            return "Run at the wall to climb it. Beware you cant climb Ice.";
         }
         else if (textOption == 5)
         {
@@ -46,6 +46,10 @@ public class TutorialText : MonoBehaviour
         else if (textOption == 8)
         {
             return "Jump off the jumppad to go higher";
+        }
+        else if (textOption == 9)
+        {
+            return "Ice is slippery. Run to the finish line!";
         }
         else return " ";
     }
