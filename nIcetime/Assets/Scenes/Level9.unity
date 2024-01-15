@@ -1487,9 +1487,13 @@ PrefabInstance:
       propertyPath: winScreen
       value: 
       objectReference: {fileID: 253626795}
+    - target: {fileID: 4219624719572060733, guid: 8d1f3a001bb7e3147afee1aa09d03ce8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4786068662372137786, guid: 8d1f3a001bb7e3147afee1aa09d03ce8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 38.22
+      value: 38.06
       objectReference: {fileID: 0}
     - target: {fileID: 4786068662372137786, guid: 8d1f3a001bb7e3147afee1aa09d03ce8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1497,7 +1501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4786068662372137786, guid: 8d1f3a001bb7e3147afee1aa09d03ce8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 88.79
+      value: 89.37
       objectReference: {fileID: 0}
     - target: {fileID: 4786068662372137786, guid: 8d1f3a001bb7e3147afee1aa09d03ce8, type: 3}
       propertyPath: m_LocalRotation.w
