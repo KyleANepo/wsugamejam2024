@@ -603,6 +603,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 484120930792088651, guid: 548fcd44ca70fe24bb6749d064d08db1, type: 3}
+      propertyPath: td
+      value: 
+      objectReference: {fileID: 1403405334}
+    - target: {fileID: 484120930792088651, guid: 548fcd44ca70fe24bb6749d064d08db1, type: 3}
       propertyPath: winScreenUI
       value: 
       objectReference: {fileID: 424891022}
