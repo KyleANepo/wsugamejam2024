@@ -11,6 +11,8 @@ public class TimerDisplay : MonoBehaviour
     private int seconds;
     private bool timerActive;
 
+    public int finalScore;
+
     private void Start()
     {
         timerActive = true;
@@ -36,11 +38,15 @@ public class TimerDisplay : MonoBehaviour
     public void PauseTimer()
     {
         timerActive = false;
-        int finalScore = ((int)(1000 - (elapsedTime - HealthDisplay.scoreSubtract)));
-        timerText.text = "Final Score: " + finalScore.ToString();
+        finalScore = ((int)(1000 - (elapsedTime - HealthDisplay.scoreSubtract)));
+        timerText.text = " ";
 
     }
 
+    public int returnScore()
+    {
+        return finalScore;
+    }
 
 
 
