@@ -534,8 +534,18 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
+<<<<<<< Updated upstream
   m_SourcePrefab: {fileID: 100100000, guid: 55608d804bfe449468d337c699b2d0fc, type: 3}
 --- !u!1001 &326566861
+=======
+  m_SourcePrefab: {fileID: 100100000, guid: 8103b44a347fd994684f1dc3ac1a0011, type: 3}
+--- !u!4 &251333063 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5650032329832204390, guid: cab215d067262a7439325f2e9974e393, type: 3}
+  m_PrefabInstance: {fileID: 1580455152}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &258660010
+>>>>>>> Stashed changes
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -543,6 +553,7 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< Updated upstream
     - target: {fileID: 4827506836003284774, guid: 719daa8bc363ceb4185b3b38b5e01891, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.82
@@ -587,11 +598,79 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platform Square 7x7 (2)
       objectReference: {fileID: 0}
+=======
+    - target: {fileID: 6042010109219669891, guid: 1f45934bc165f2d42813dd7e86d5fda7, type: 3}
+      propertyPath: orientation
+      value: 
+      objectReference: {fileID: 1194571273}
+    - target: {fileID: 7026426806237663960, guid: 1f45934bc165f2d42813dd7e86d5fda7, type: 3}
+      propertyPath: m_Name
+      value: Camera Parent (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439480267467461249, guid: 1f45934bc165f2d42813dd7e86d5fda7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439480267467461249, guid: 1f45934bc165f2d42813dd7e86d5fda7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439480267467461249, guid: 1f45934bc165f2d42813dd7e86d5fda7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439480267467461249, guid: 1f45934bc165f2d42813dd7e86d5fda7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439480267467461249, guid: 1f45934bc165f2d42813dd7e86d5fda7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439480267467461249, guid: 1f45934bc165f2d42813dd7e86d5fda7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439480267467461249, guid: 1f45934bc165f2d42813dd7e86d5fda7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439480267467461249, guid: 1f45934bc165f2d42813dd7e86d5fda7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439480267467461249, guid: 1f45934bc165f2d42813dd7e86d5fda7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439480267467461249, guid: 1f45934bc165f2d42813dd7e86d5fda7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7608521468088330446, guid: 1f45934bc165f2d42813dd7e86d5fda7, type: 3}
+      propertyPath: cameraPosition
+      value: 
+      objectReference: {fileID: 251333063}
+>>>>>>> Stashed changes
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
+<<<<<<< Updated upstream
   m_SourcePrefab: {fileID: 100100000, guid: 719daa8bc363ceb4185b3b38b5e01891, type: 3}
+=======
+  m_SourcePrefab: {fileID: 100100000, guid: 1f45934bc165f2d42813dd7e86d5fda7, type: 3}
+--- !u!4 &258660011 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2779741213019475857, guid: 1f45934bc165f2d42813dd7e86d5fda7, type: 3}
+  m_PrefabInstance: {fileID: 258660010}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &258660012 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1669695068633901090, guid: 1f45934bc165f2d42813dd7e86d5fda7, type: 3}
+  m_PrefabInstance: {fileID: 258660010}
+  m_PrefabAsset: {fileID: 0}
+>>>>>>> Stashed changes
 --- !u!114 &422347979 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 998426941303055225, guid: c4b7b8e7a1af50345aa5ad10bce98e22, type: 3}
@@ -990,6 +1069,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7680575904539107075, guid: d2d0d7e2e70ed4540b61915d6f48ea71, type: 3}
   m_PrefabInstance: {fileID: 435994534}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
 --- !u!4 &923274109 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2779741213019475857, guid: e19112b18377b6d42bc2a71b0b36e201, type: 3}
@@ -1300,6 +1380,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e19112b18377b6d42bc2a71b0b36e201, type: 3}
+=======
+>>>>>>> Stashed changes
 --- !u!4 &1194571273 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7591566373495230480, guid: cab215d067262a7439325f2e9974e393, type: 3}
@@ -1712,11 +1794,11 @@ PrefabInstance:
     - target: {fileID: 4507728298896428750, guid: cab215d067262a7439325f2e9974e393, type: 3}
       propertyPath: cam
       value: 
-      objectReference: {fileID: 1960668848}
+      objectReference: {fileID: 258660012}
     - target: {fileID: 4507728298896428750, guid: cab215d067262a7439325f2e9974e393, type: 3}
       propertyPath: attackPoint
       value: 
-      objectReference: {fileID: 923274109}
+      objectReference: {fileID: 258660011}
     - target: {fileID: 8027821721783267950, guid: cab215d067262a7439325f2e9974e393, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.103326
@@ -2107,11 +2189,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1960668848 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1669695068633901090, guid: e19112b18377b6d42bc2a71b0b36e201, type: 3}
-  m_PrefabInstance: {fileID: 1190749167}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1970034589 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7017301171342320694, guid: be33de3d48b70ef41a986bc2624d5a39, type: 3}
@@ -2259,8 +2336,12 @@ SceneRoots:
   - {fileID: 1902344792}
   - {fileID: 117316350}
   - {fileID: 1305099471}
+<<<<<<< Updated upstream
   - {fileID: 1146485377}
   - {fileID: 1190749167}
+=======
+  - {fileID: 258660010}
+>>>>>>> Stashed changes
   - {fileID: 1580455152}
   - {fileID: 1376552882}
   - {fileID: 1515382368}
