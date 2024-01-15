@@ -18,6 +18,8 @@ public class LevelSelector : MonoBehaviour
     // Update is called once per frame
     public void OpenScene()
     {
+
+        PauseMenu.GameIsPaused = false;
         SceneManager.LoadScene("Level" + level.ToString());
     }
 }
