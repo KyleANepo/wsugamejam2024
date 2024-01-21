@@ -3179,16 +3179,28 @@ PrefabInstance:
       value: RespawnPlane
       objectReference: {fileID: 0}
     - target: {fileID: 7017301171342320694, guid: fce941e409ecd0b48a92e5cd2e7394d7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 18.113869
+      objectReference: {fileID: 0}
+    - target: {fileID: 7017301171342320694, guid: fce941e409ecd0b48a92e5cd2e7394d7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 18.113869
+      objectReference: {fileID: 0}
+    - target: {fileID: 7017301171342320694, guid: fce941e409ecd0b48a92e5cd2e7394d7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 18.113869
+      objectReference: {fileID: 0}
+    - target: {fileID: 7017301171342320694, guid: fce941e409ecd0b48a92e5cd2e7394d7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.891275
+      value: 54.5
       objectReference: {fileID: 0}
     - target: {fileID: 7017301171342320694, guid: fce941e409ecd0b48a92e5cd2e7394d7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.5066903
+      value: -10.1
       objectReference: {fileID: 0}
     - target: {fileID: 7017301171342320694, guid: fce941e409ecd0b48a92e5cd2e7394d7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.1036224
+      value: 30.1
       objectReference: {fileID: 0}
     - target: {fileID: 7017301171342320694, guid: fce941e409ecd0b48a92e5cd2e7394d7, type: 3}
       propertyPath: m_LocalRotation.w

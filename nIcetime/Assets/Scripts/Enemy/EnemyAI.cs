@@ -58,7 +58,7 @@ public abstract class EnemyAI : MonoBehaviour
     {
 
         frozen = true;
-        GameObject freeze = Instantiate(Ice, transform.position, transform.rotation);
+        GameObject freeze = Instantiate(Ice, transform.position, Quaternion.identity);
         // Destroy(gameObject);
     }
 }

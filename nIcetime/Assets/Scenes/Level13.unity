@@ -2291,8 +2291,16 @@ PrefabInstance:
       value: RespawnPlane
       objectReference: {fileID: 0}
     - target: {fileID: 7017301171342320694, guid: be33de3d48b70ef41a986bc2624d5a39, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 33.355747
+      objectReference: {fileID: 0}
+    - target: {fileID: 7017301171342320694, guid: be33de3d48b70ef41a986bc2624d5a39, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 33.388676
+      objectReference: {fileID: 0}
+    - target: {fileID: 7017301171342320694, guid: be33de3d48b70ef41a986bc2624d5a39, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.891275
+      value: 44.7
       objectReference: {fileID: 0}
     - target: {fileID: 7017301171342320694, guid: be33de3d48b70ef41a986bc2624d5a39, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2300,7 +2308,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7017301171342320694, guid: be33de3d48b70ef41a986bc2624d5a39, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.1036224
+      value: 38.3
       objectReference: {fileID: 0}
     - target: {fileID: 7017301171342320694, guid: be33de3d48b70ef41a986bc2624d5a39, type: 3}
       propertyPath: m_LocalRotation.w
