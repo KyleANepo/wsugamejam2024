@@ -13,6 +13,16 @@ public class SettingsMenu : MonoBehaviour
         audioMixer.SetFloat("Volume", volume);
     }
 
+    public void SetSensX(float sensx)
+    {
+        PlayerCam.sensX = sensx;
+    }
+
+    public void SetSensY(float sensy)
+    {
+        PlayerCam.sensY = sensy;
+    }
+
     public void SetFullscreen (bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
