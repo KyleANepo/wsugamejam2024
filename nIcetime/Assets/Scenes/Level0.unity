@@ -1682,6 +1682,22 @@ PrefabInstance:
       propertyPath: attackPoint
       value: 
       objectReference: {fileID: 765339109}
+    - target: {fileID: 7697266169323391042, guid: 46e6a1c92fe83fa4db01ad67c91717ac, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697266169323391042, guid: 46e6a1c92fe83fa4db01ad67c91717ac, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697266169323391042, guid: 46e6a1c92fe83fa4db01ad67c91717ac, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697266169323391042, guid: 46e6a1c92fe83fa4db01ad67c91717ac, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8027821721783267950, guid: 46e6a1c92fe83fa4db01ad67c91717ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.4884996
